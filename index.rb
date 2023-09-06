@@ -84,5 +84,18 @@ def mostrarHora ()
     url = 'http://worldtimeapi.org/api/timezone/America/Sao_Paulo'
     response = Net::HTTP.get(URI(url))
     data = JSON.parse(response)
-    puts data[:datetime]
+    hora = data[:utc_datetime]
+    puts ("string de hora" + hora.strftime("%H:%M:%S"))
+end
+
+
+def mostrarHora()
+  require 'net/http'
+  require 'json'
+  require 'datetime'
+  url = 'http://worldtimeapi.org/api/timezone/America/Sao_Paulo'
+  response = Net::HTTP.get(URI(url))
+  data = JSON.parse(response)
+  hora = DateTime.parse(data[:utc_datetime])
+  puts ("A hora atual em São Paulo é: " + hora.strftime("%H:%M"))
 end
