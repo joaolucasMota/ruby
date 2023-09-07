@@ -11,6 +11,10 @@ class Aluno
     end
 end
 
+#Geter e setters são em ruby
+#attr_reader - apenas leitura
+#attr_writer - apenas escrita
+#attr_acessor - permite que o atributo seja lido e alterado
 
 #require_relative 'nome_do_arquivo'
 #o comando a cima cria a classe

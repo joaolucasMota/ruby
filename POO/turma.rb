@@ -13,4 +13,7 @@ class Turma
     def total_alunos()
         alunos.length()
     end 
+
+    private
+    attr_writer :alunos
 end
